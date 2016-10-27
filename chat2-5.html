@@ -1,0 +1,320 @@
+
+<title>Chat</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<div class="container" style="">
+	<div class="row">
+		<div class="col-sm-4">
+
+		</div>
+
+		<div class="col-sm-4" style="border:none;">
+			<div class="row">
+				<h1 style="text-align: center;">Vass</h1>
+			</div>
+			<div class="row">
+			<div class="row">
+					<div id="header">
+						<h1 style="padding-left:0.5em;">&larr;</h1>
+						<h3>Jane Doe</h3>
+
+						<img src="http://ww1.prweb.com/prfiles/2014/04/10/11752526/gI_134971_best-image-web-hosting.png" id="dropdownimage" class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" style="right:0.5em;width:4.3em; border:none; top:0em !important; position:absolute;border-radius: 50%;float: right;background: transparent;" />
+						
+						<ul class="dropdown-menu dropdown-menu-right" style="top:0px;right:0.15em;list-style: none;position: absolute;width:1em;">
+						    <li ><a href="#">Chat Details</a></li>
+						    <li ><a href="#">Mute</a></li>
+						    <li ><a href="#">Clear History</a></li>
+						    <li ><a href="#">Search</a></li>
+						    <li ><a href="#">Help & Feedback</a></li>
+					    </ul>
+
+					</div>
+			</div>
+			<br>
+			<div class="row"  id="chat" style="margin: auto;overflow-y: scroll; overflow-x: hidden;">
+				<br>
+				<br>
+				<br>
+
+							<div style="display: inline-block;">
+							<div class="img" style=""><img src="http://ww1.prweb.com/prfiles/2014/04/10/11752526/gI_134971_best-image-web-hosting.png" style="" />
+							</div>
+							
+							<li style="max-width: 16em;text-decoration: none;display: inline-block;background-color: purple;border-radius: 5em;color: white;list-style: none;padding: 0.5em;padding-left: 1.5em;padding-right: 1.5em;margin: 0.5em;">
+							
+							hi im barnaly haldar. who are you??iif huhfsfh  hifh hdohfoh hfsoxhfzso hhoh</li>
+							</div>	
+								
+	
+
+				
+							
+							
+							
+							
+							<li id="chat-right" >
+							
+							hi im barnaly haldar. who are you??iif huhfsfh  hifh hdohfoh hfsoxhfzso hhoh
+							</li>
+							
+					
+				
+							<div style="display: inline-block;">
+							<div class="img" style=""><img src="http://ww1.prweb.com/prfiles/2014/04/10/11752526/gI_134971_best-image-web-hosting.png" style="" />
+							</div>	
+							
+							<li style="max-width: 16em;text-decoration: none;display: inline-block;background-color: purple;border-radius: 5em;color: white;list-style: none;padding: 0.5em;padding-left: 1.5em;padding-right: 1.5em;margin: 0.5em;">
+							
+							hi im barnaly haldar. who are you??iif huhfsfh  hifh hdohfoh hfsoxhfzso hhoh</li>
+							</div>	
+							
+				
+							
+							<li id="chat-right" style="margin-left: 30%;" >
+							
+							hi im barnaly haldar. who are you??iif huhfsfh  hifh hdohfoh hfsoxhfzso hhoh</li>
+							<hr>
+					
+				
+			</div>
+			<div class="container">
+				<div class="row">
+					<div id="input">
+						<div class="col-sm-12">
+							<h3 style="color:#0066ff;padding-right:0.5em;">+</h3>
+						
+							
+								<input type="text" name="input" id="msg" placeholder="Say Something">
+								<button onclick="f()" type="button" name="submit" value="" style="font-size:1.8em" class="fa" id="send">&#xf1d8;</button>
+							
+							<div id="smiley"><img src="https://cdn4.iconfinder.com/data/icons/imoticons/105/imoticon_3-512.png" width="25" style="right:3em;position: absolute;top: 0px;cursor: pointer;" onclick=""></div>
+
+							<div id="voice" style="float: right; position: absolute;top:0px;right:0.6em;cursor: pointer;"><i style="font-size:2em" class="fa">&#xf130;</i></div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="col-sm-4">
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+function f(){
+	
+	$('#chat').append(("<hr>"));
+	$('#chat').append(
+  	$('<tr/>')
+    .attr("id", "chat-right1")
+    .text($('#msg').val())
+	);
+	$('#chat').append(("<br>"));
+	
+	
+	$('#msg').val('');
+	$('#voice').show();
+	$('#send').hide();
+}
+	$('#send').hide();
+	$('#msg').on('input',function(e){
+		var msg= $(this).val();
+		if(msg.length>0)
+		{
+			$('#voice').hide();
+			$('#send').show();
+		}
+		if(msg.length==0)
+		{
+			$('#send').hide();
+			$('#voice').show();
+		}
+	});
+</script>
+<style type="text/css">
+	#chat-right1
+	{
+		max-width: 16em;
+		text-decoration: none;
+		display: inline-block;
+		background-color: purple;
+		border-radius: 5em;
+		color: white;
+		list-style: none;
+		padding: 0.5em;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+		border: none;
+		float: right;
+		
+	}
+	#chat-right
+	{
+		max-width: 16em;
+		text-decoration: none;
+		display: inline-block;
+		background-color: purple;
+		border-radius: 5em;
+		color: white;
+		list-style: none;
+		padding: 0.5em;
+		padding-left: 1.5em;
+		padding-right: 1.5em;
+		border: none;
+		float: right;
+		position: ;
+		margin-bottom: 0.5em;
+	}
+	#r1
+	{
+		margin-right:0.1em; 
+	}
+	#c1
+	{
+		display:inline;
+	}
+	.text1
+	{
+		display: inline-flex;float: right;
+	}
+	.text
+	{
+		max-width: 10em;text-decoration: none;display: inline-block;background-color: purple;border-radius: 1em;color: white;list-style: none;padding: 1em;margin: 0.5em;
+	}
+	img{
+		cursor: pointer;
+
+	}	
+	#chat
+	{
+		
+		background-color: white;
+		width: auto;
+		color: ;
+		opacity: 0.8;
+		height:85%;
+		/*border-top: none;
+		border-top-style:none; 
+		border-radius: 10px;
+		border:solid 2px black;*/
+		overflow: scroll;
+		overflow-x: hidden;
+		border-left: solid 2px black;
+		border-right: solid 2px black;
+		border-bottom: solid 2px black;
+		border-radius: 10px;
+		border-bottom-left-radius: 1em;
+		border-bottom-right-radius: 1em;
+		padding-bottom: 3em;
+
+	}
+	::-webkit-scrollbar{
+		width: 0px;
+		background:transparent;
+		display: none;
+	}
+	
+	#header
+	{
+		background-color: #3385ff;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+		padding-bottom: 0.5em;
+		box-shadow:0px 2px 5px black; 
+		position: fixed;
+		
+		z-index:1 ;
+		opacity: 0.9;
+		margin-left:0em;
+		margin-right:0em;
+		right:0em;
+		left: 0em;
+		top:6.2em;
+		position:absolute;
+		border-left: solid 2px black;
+		border-right: solid 2px black;
+		border-top: solid 2px black;
+		border-top-left-radius: 1em;
+		border-top-right-radius: 1em;
+	}
+	#header h1 ,#header h3
+	{
+		display: inline;
+		
+	}
+	#header h3
+	{
+		color: white;
+	}
+	.img
+	{
+		display: inline-block;
+
+	}
+	.img img
+	{
+		width: 2.5em;
+		border-radius: 50%;
+		margin-top: 0.6em;
+		
+		float: right;
+	}
+	#input
+	{
+		bottom:0.7em;
+		right:1.8em;
+		left: 0.3em;
+		margin-left: 1.5em;
+		background-color: white;
+		position: absolute;
+		border-radius: 5em;
+		box-shadow: 1px 3px 5px grey;
+		padding: 0.4em;
+
+	}
+	#input input{
+		background-color: ;
+		border:none;
+	}
+	#input h3 ,#input form
+	{
+		display: inline;
+		margin: auto;
+	}
+	#send
+	{
+		float: right; 
+		position: absolute;
+		top:0px;
+		right: 0px;
+		border:none;
+		background:transparent;
+	}
+	#body img
+	{
+		display: inline;
+	}
+
+	p
+	{
+		background-color: purple;
+		padding: 0.5em;
+		
+		
+		
+		padding-left: 0.7em;
+		padding-right: 0.7em;
+		font-size: 1.2em;
+		color: white;
+		border-radius: 5em;
+	}
+</style>
